@@ -856,3 +856,104 @@ img {
         grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
     }
 }
+/* --- СТИЛИ ДЛЯ ЮРИДИЧЕСКИХ СТРАНИЦ (.pages) --- */
+.pages {
+    padding-top: 140px;
+    /* Отступ сверху, чтобы хедер не перекрывал заголовок */
+    padding-bottom: 80px;
+    min-height: 100vh;
+}
+
+.pages .container {
+    max-width: 900px;
+    /* Ограничиваем ширину текста для удобства чтения */
+}
+
+.pages h1 {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 50px;
+    color: var(--text-main);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 30px;
+}
+
+.pages h2 {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary);
+    /* Индиго акцент для подзаголовков */
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.pages p {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    /* Светло-серый/сиреневый текст */
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.pages ul {
+    list-style: none;
+    /* Убираем стандартные точки */
+    margin-bottom: 25px;
+    padding-left: 0;
+}
+
+.pages li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 15px;
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+/* Кастомные буллиты (точки) цвета акцента */
+.pages li::before {
+    content: "•";
+    color: var(--accent);
+    /* Бирюзовый */
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: -2px;
+}
+
+.pages strong {
+    color: var(--text-main);
+    /* Белый для важных слов */
+    font-weight: 600;
+}
+
+.pages a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: 0.3s;
+}
+
+.pages a:hover {
+    border-bottom-color: var(--accent);
+    color: white;
+}
+
+/* Адаптив для мобильных */
+@media (max-width: 768px) {
+    .pages {
+        padding-top: 120px;
+    }
+
+    .pages h1 {
+        font-size: 2.2rem;
+    }
+
+    .pages h2 {
+        font-size: 1.5rem;
+    }
+}
