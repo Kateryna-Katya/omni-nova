@@ -1,56 +1,322 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/omni-nova/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Omni-Nova | Карьерный апгрейд и стратегии роста</title>
+  <meta name="description"
+    content="Инновационная платформа для построения карьеры. Консультации, стратегии и AI-инструменты для вашего роста в Германии и ЕС.">
+<link rel="icon"
+  href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%2306b6d4'/%3E%3C/svg%3E"
+  type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <script type="module" crossorigin src="/omni-nova/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/omni-nova/assets/styles-guStct1H.css">
+    <link rel="stylesheet" crossorigin href="/omni-nova/assets/styles-CHwJ6frb.css">
   </head>
   <body>
+    <div class="glow-bg"></div>
     <header class="header">
-  <div class="container">
-    <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="{=$icon-path}"></use>
-        </svg>
-      </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
-        </li>
+  <div class="container header__container">
+    <a href="/" class="header__logo">Omni<span class="header__logo-accent">Nova</span></a>
+
+    <nav class="header__nav desktop-only">
+      <ul class="header__menu">
+        <li><a href="#hero" class="header__link">Главная</a></li>
+        <li><a href="#about" class="header__link">О платформе</a></li>
+        <li><a href="#benefits" class="header__link">Преимущества</a></li>
+        <li><a href="#innovations" class="header__link">Инновации</a></li>
       </ul>
     </nav>
+
+    <div class="header__actions">
+      <a href="#contact" class="btn btn--outline desktop-only">Связаться</a>
+
+      <button class="burger-btn" aria-label="Menu">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
   </div>
 </header>
+<div class="mobile-menu">
+  <nav class="mobile-menu__nav">
+    <ul class="mobile-menu__list">
+      <li><a href="#hero" class="mobile-link">Главная</a></li>
+      <li><a href="#about" class="mobile-link">О платформе</a></li>
+      <li><a href="#benefits" class="mobile-link">Преимущества</a></li>
+      <li><a href="#innovations" class="mobile-link">Инновации</a></li>
+      <li><a href="#contact" class="mobile-link highlight">Связаться</a></li>
+    </ul>
+  </nav>
+</div>
 
-
-    <main>
+    <main class="main">
       <!-- Loads the specified .html file -->
-      
+      <section id="hero" class="hero">
+    <canvas id="hero-canvas"></canvas>
+    <div class="container hero__container">
+        <div class="hero__content">
+            <div class="badge">Платформа уже доступна в Европе</div>
+            <h1 class="hero__title split-text">Технология<br>нового поколения</h1>
+            <p class="hero__desc split-text">Переосмыслите подход к развитию. Постройте карьеру, которая работает на
+                вас, используя AI-инструменты для реальных задач.</p>
+            <div class="hero__btns">
+                <a href="#contact" class="btn btn--primary">Начать сейчас</a>
+                <a href="#about" class="btn btn--text">Узнать больше <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="section about">
+    <div class="container">
+        <div class="section__header">
+            <h2 class="section__title split-text">Воплотите мечты в реальность</h2>
+            <p class="section__subtitle">Мы объединили карьерный консалтинг и передовую цифровую инфраструктуру.</p>
+        </div>
+        <div class="about__grid">
+            <div class="card about__card" data-aos>
+                <i class="fa-solid fa-brain card__icon"></i>
+                <h3>Экспертная поддержка</h3>
+                <p>Методологии, доказавшие эффективность на рынке Германии.</p>
+            </div>
+            <div class="card about__card" data-aos>
+                <i class="fa-solid fa-chart-line card__icon"></i>
+                <h3>Стратегия роста</h3>
+                <p>Решения, которые меняют правила игры в вашей карьере.</p>
+            </div>
+            <div class="card about__card" data-aos>
+                <i class="fa-solid fa-rocket card__icon"></i>
+                <h3>Быстрый старт</h3>
+                <p>Подключение занимает 2 минуты. Легко разобраться без опыта.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="benefits" class="section benefits">
+    <div class="container">
+        <div class="benefits__wrapper">
+            <div class="benefits__content">
+                <h2 class="section__title split-text">Почему выбирают нас?</h2>
+                <ul class="benefits__list">
+                    <li class="benefit-item">
+                        <span class="check-icon"><i class="fa-solid fa-check"></i></span>
+                        <div>
+                            <h4>Проверенный партнер</h4>
+                            <p>Официальная работа в правовом поле ЕС.</p>
+                        </div>
+                    </li>
+                    <li class="benefit-item">
+                        <span class="check-icon"><i class="fa-solid fa-check"></i></span>
+                        <div>
+                            <h4>Инновационная технология</h4>
+                            <p>AI-аналитика ваших компетенций.</p>
+                        </div>
+                    </li>
+                    <li class="benefit-item">
+                        <span class="check-icon"><i class="fa-solid fa-check"></i></span>
+                        <div>
+                            <h4>Пассивный доход</h4>
+                            <p>Программы монетизации профессиональных знаний.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="benefits__image">
+                <div class="img-box">
+                    <img src="img/placeholder.png" alt="Analytics Dashboard">
+                    <div class="img-overlay"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="innovations" class="section innovations">
+    <div class="container">
+        <h2 class="section__title center split-text">Инновации на пальцах</h2>
+        <div class="innovations__grid">
+            <div class="inn-card">
+                <div class="inn-card__num">01</div>
+                <h3>AI-Ассистент</h3>
+                <p>Персональный бот, который подбирает вакансии и проекты под ваш профиль 24/7.</p>
+            </div>
+            <div class="inn-card">
+                <div class="inn-card__num">02</div>
+                <h3>Smart-Контракты</h3>
+                <p>Прозрачность всех договоренностей благодаря блокчейн-технологиям.</p>
+            </div>
+            <div class="inn-card">
+                <div class="inn-card__num">03</div>
+                <h3>Big Data Анализ</h3>
+                <p>Оцените перспективы проекта на основе данных рынка в реальном времени.</p>
+            </div>
+            <div class="inn-card">
+                <div class="inn-card__num">04</div>
+                <h3>Автоматизация</h3>
+                <p>Рутинные задачи берет на себя алгоритм. Вы занимаетесь творчеством.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="blog" class="section blog">
+    <div class="container">
+        <h2 class="section__title split-text">Инсайты и Тренды</h2>
+        <div class="blog__grid">
+            <article class="blog-card">
+                <div class="blog-card__img">
+                    <img src="img/placeholder.png" alt="Blog 1">
+                </div>
+                <div class="blog-card__content">
+                    <span class="blog-date">12 Декабря 2025</span>
+                    <h4>Как AI меняет рынок труда в Германии?</h4>
+                    <a href="#" class="read-more">Читать далее &rarr;</a>
+                </div>
+            </article>
+            <article class="blog-card">
+                <div class="blog-card__img">
+                    <img src="img/placeholder.png" alt="Blog 2">
+                </div>
+                <div class="blog-card__content">
+                    <span class="blog-date">10 Декабря 2025</span>
+                    <h4>Топ-5 навыков для карьерного апгрейда</h4>
+                    <a href="#" class="read-more">Читать далее &rarr;</a>
+                </div>
+            </article>
+            <article class="blog-card">
+                <div class="blog-card__img">
+                    <img src="img/placeholder.png" alt="Blog 3">
+                </div>
+                <div class="blog-card__content">
+                    <span class="blog-date">08 Декабря 2025</span>
+                    <h4>Пассивный доход для IT-специалистов</h4>
+                    <a href="#" class="read-more">Читать далее &rarr;</a>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="section contact">
+    <div class="container contact__container">
+        <div class="contact__info">
+            <h2 class="section__title split-text">Бесплатная консультация</h2>
+            <p>Оставьте заявку, и мы свяжемся с вами для обсуждения стратегии вашего роста.</p>
+            <ul class="contact__list">
+                <li><i class="fa-solid fa-envelope"></i> hello@omni-nova.blog</li>
+                <li><i class="fa-solid fa-phone"></i> +49 30 754 29 103</li>
+                <li><i class="fa-solid fa-location-dot"></i> Friedrichstraße 123, 10117 Berlin</li>
+            </ul>
+        </div>
+
+        <form class="contact__form" id="contactForm">
+            <div class="form-group">
+                <input type="text" id="name" required placeholder=" ">
+                <label for="name">Ваше имя</label>
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" required placeholder=" ">
+                <label for="email">E-mail</label>
+            </div>
+            <div class="form-group">
+                <input type="tel" id="phone" required placeholder=" " pattern="[\+0-9\-\s]+" title="Номер телефона">
+                <label for="phone">Телефон</label>
+            </div>
+
+            <div class="captcha-group">
+                <span id="captcha-question"></span>
+                <input type="number" id="captcha-answer" required placeholder="Ответ">
+            </div>
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="policy" required>
+                <label for="policy">Я согласен с <a href="privacy.html">Политикой обработки данных</a></label>
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--full">Запросить доступ</button>
+            <div class="form-message" id="formMessage"></div>
+        </form>
+    </div>
+</section>
     </main>
 
     <footer class="footer">
   <div class="container">
-    <p class="footer-desc">
-      Made with ✨ by
-      <a
-        class="footer-link"
-        href="https://goit.global/ua/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GoIT team
-      </a>
-    </p>
+    <div class="footer__grid">
+      <div class="footer__col">
+        <a href="/" class="footer__logo">Omni<span>Nova</span>.blog</a>
+        <p class="footer__desc">
+          Технология нового поколения для вашего карьерного роста.
+          Переосмыслите подход к развитию вместе с экспертными стратегиями.
+        </p>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__title">Навигация</h3>
+        <ul class="footer__links">
+          <li><a href="#about">О методе</a></li>
+          <li><a href="#innovations">Инновации</a></li>
+          <li><a href="#program">Программа</a></li>
+          <li><a href="#contact">Консультация</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__title">Правовая информация</h3>
+        <ul class="footer__links">
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="cookies.html">Cookie Policy</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
+          <li><a href="return.html">Return Policy</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+          <li><a href="personal-data-policy.html">Personal Data</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__title">Контакты</h3>
+        <ul class="footer__contacts">
+          <li>
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Friedrichstraße 123,<br>10117 Berlin, Deutschland</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-phone"></i>
+            <a href="tel:+49 30 754 29 103">+49 30 754 29 103</a>
+          </li>
+          <li>
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:hello@omni-nova.blog">hello@omni-nova.blog</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p>&copy; 2025 Omni-Nova.blog. Все права защищены. Платформа уже доступна в Европе.</p>
+    </div>
   </div>
 </footer>
-
+    <div class="cookie-popup" id="cookiePopup">
+      <p>Этот сайт использует cookies для улучшения работы. Подробнее — в нашей <a href="./cookies.html">Cookie политике</a>.
+      </p>
+      <button id="acceptCookies" class="btn btn--sm">Принять</button>
+    </div>
+<script src="https://unpkg.com/split-type"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/@studio-freight/lenis@1.0.29/dist/lenis.min.js"></script>
 
   </body>
 </html>
